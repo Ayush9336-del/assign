@@ -1,6 +1,5 @@
 
-// ----------------- first part (a) ---------------------------------
-
+ 
 let a = document.getElementById('name');
 let b = document.getElementById('age');
 let c = document.getElementById('salary');
@@ -30,8 +29,7 @@ function add() {
 }
 
 
-// ------------------------- second part (b) -------------------------------
-
+ 
 const employees = [
   { name: "Amit",   age: 25, salary: 6000, dob: "1999-02-10" },
       { name: "Riya", age: 19,   salary: 3000,   dob: "2005-05-21"      },
@@ -45,15 +43,15 @@ const maxSalary = employees.filter(emp => emp.salary > 5000);
 console.log("Salary > 5000:", maxSalary);
 
 
-const groupedByAge = employees.reduce((group, emp) => {
-      if (!group[emp.age]) {
-       group[emp.age] = [];
-  }
-     group[emp.age].push(emp);
-      return group;
+const gpByAge = employees.reduce((gp, emp) => {
+      if (!gp[emp.age]) {
+       gp[emp.age] = [];
+  } 
+         gp[emp.age].push(emp);
+      return gp;
 }, {});
 
-console.log("Grouped by age:", groupedByAge);
+console.log("gped by age:", gpByAge);
 
 
 const updatedEmployees = employees
