@@ -1,0 +1,53 @@
+Program Output Explanation
+
+
+1  ->  In function first it will look for the variable x which is not present in the first function so it will find the x in global scope then print x = 5 
+
+
+same for the second function it will look for the y in lexical scope that is in first function  y = 10 
+
+
+for the z that is defined as let z = 20 but till line 3 it is not  delcared so it will give undefined
+
+
+for the last one it will thorw reference error because for the var it has function level scope and we are tyring to access it out of the function  y in not defined
+
+
+
+2 -> 
+
+JavaScript knows z exists, but doesn't know its value yet.
+So it prints undefined.
+
+3-> 
+
+it wil try to find the  y  in the same function as it is not there so will check the first function and prints it 
+
+
+4-> 
+y lives inside first(), so outside it, y does not exist because var has function level scope 
+
+
+5->
+
+let x = 5;
+
+function first() {
+  console.log(x); // Line 1  --> 5 
+  let y = 10;
+
+  function second() {
+    console.log(y); // Line 2   --> 10 
+    console.log(z); // Line 3   --> reference error 
+    let z = 20;
+  }
+
+  second();
+}
+
+first();
+console.log(y); // Line 4       
+
+
+
+for the line 1 and 2 the output is 5  and 10  but for the line 3 it will show reference error because of let it can't access the variable z then it will not go for the  line 4 in var  y 
