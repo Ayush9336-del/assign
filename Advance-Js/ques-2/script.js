@@ -1,29 +1,31 @@
+ var temperatureConverter = {
+      celsius: 0,
 
- var calculator = { 
-     a : 0 , 
-     b : 0 , 
+      read: function () {
+        celsius = Number(
+          document.getElementById("celsius").value
+        );
+      },
 
-    read : function(){
-     a = Number( prompt("enter a value ")) 
-     b = Number( prompt("enter second value ")) ; 
+      toFahrenheit: function () {
+        return (celsius * 9) / 5 + 32;
+      },
 
-     console.log(`sum is ${calculator.add()}  ,  multiply is ${ calculator.multiply() } , difference is ${calculator.substract()}` ) ; 
-    } ,
+      toKelvin: function () {
+        return celsius + 273.15;
+      },
 
-    add : function (  ){
-        let ans = a + b ; 
-        // console.log(ans) ;
-        return ans ; 
-    } , 
+      display: function () {
+        temperatureConverter.read();
 
-    multiply : function( ){
-        let ans  = a* b ; 
-        // console.log(ans) ; 
-        return ans ; 
-    } ,
-    substract :function (){
-        let ans =  a -b  ;
-        // console.log(ans) ; 
-        return ans  ;
-    }
-}
+        document.getElementById("f").innerText =
+          "Fahrenheit: " + temperatureConverter.toFahrenheit();
+
+        document.getElementById("k").innerText =
+          "Kelvin: " + temperatureConverter.toKelvin();
+
+        console.log("Celsius:", temperatureConverter.celsius);
+        console.log("Fahrenheit:", temperatureConverter.toFahrenheit());
+        console.log("Kelvin:", temperatureConverter.toKelvin());
+      }
+    };
