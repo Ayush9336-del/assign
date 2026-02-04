@@ -86,29 +86,136 @@
 //  console.log(one())
 //  console.log(one())
 
-let x = 5;
+// let x = 5;
 
-function first() {
-  console.log(x); // Line 1
-  let y = 10;
+// function first() {
+//   console.log(x); // Line 1
+//   let y = 10;
 
-  function second() {
-    console.log(y); // Line 2
-    console.log(z); // Line 3
-    let z = 20;
-  }
+//   function second() {
+//     console.log(y); // Line 2
+//     console.log(z); // Line 3
+//     let z = 20;
+//   }
 
-  second();
+//   second();
+// }
+
+// first();
+// console.log(y); // Line 4
+
+
+// a = 7 ; 
+// console.log(a) ;
+
+
+
+
+// (function(){
+//   var a = b = 3;
+// })();
+
+// console.log(typeof a, typeof b);
+
+
+// let arr = [ 1,2,3,4,5 ] 
+// console.log(arr.map(e=> e * 2)) 
+
+// const proto = { key :"value"} ; 
+
+// const  obj  = Object.create( proto ) ; 
+
+// console.log(obj)
+// console.log(obj.key)
+
+// obj.key  = 110 ; 
+// console.log(obj.key)
+// console.log(proto.key)
+
+// const orgObj = { company : "abc Org "} 
+
+// const carObj = { carName   : "ford"} 
+// const employee = Object.assign( { } , orgObj , carObj )  ; 
+
+// console.log(employee)
+
+
+// function Person ( name ) {
+//   this.name = name ; 
+// }
+
+// const person1 = new Person ( 'alice') ; 
+
+// console.log(person1) ; 
+// person1.__proto__.lastname = 'garg' 
+// console.log(person1) 
+// const person2 = new Person('bob') 
+// console.log("person2  -->  " ,  person2 )
+
+// function call() {
+//         for ( var i = 0 ; i < 10 ; i++ ) {
+//         setTimeout( (e)=>{
+//             console.log(i) ; 
+//         } , 3000)
+//         }
+// }
+
+// call() ; 
+// function call2() {
+//         for ( let i = 0 ; i < 10 ; i++ ) {
+//         setTimeout( (e)=>{
+//             console.log(i) ; 
+//         } , 3000)
+//         }
+// }
+
+// call2() ; 
+
+
+// function call3 (){
+//     for  ( var i = 1 ; i <= 5 ;i++ ) {
+//         function close(x) {
+//             setTimeout( function() {
+//                 console.log(x) ; 
+//             } , x * 1000 )
+//         }
+//         close(i) ; 
+//     }
+// }
+
+// call3()
+
+// let a = function abc() {
+//     console.log("named function") ; 
+// }
+
+// a()
+ 
+
+// let arr= [ 1,2,3,4,5,6,7,8,9 ] 
+
+// let brr = arr.filter((e )=>{
+//     return  e % 2 == 0  ; 
+// })
+
+// console.log(brr)
+
+function call( ) {
+        for ( let i = 0 ; i < arguments.length ; i++ ) {
+            console.log(arguments[i])
+        }
 }
 
-first();
-console.log(y); // Line 4
+call( 1,2,3,4,5,6,7,8 ) 
 
+// function call (a ,b ,c ) {
+//     console.log(arguments[0]) 
+//     console.log(arguments[1]) 
+//     console.log(arguments[2]) 
 
+// }
 
-
-
-
+// call(1,2,3) ; 
 
 
 
