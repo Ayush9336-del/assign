@@ -200,13 +200,13 @@
 
 // console.log(brr)
 
-function call( ) {
-        for ( let i = 0 ; i < arguments.length ; i++ ) {
-            console.log(arguments[i])
-        }
-}
+// function call( ) {
+//         for ( let i = 0 ; i < arguments.length ; i++ ) {
+//             console.log(arguments[i])
+//         }
+// }
 
-call( 1,2,3,4,5,6,7,8 ) 
+// call( 1,2,3,4,5,6,7,8 ) 
 
 // function call (a ,b ,c ) {
 //     console.log(arguments[0]) 
@@ -217,7 +217,83 @@ call( 1,2,3,4,5,6,7,8 )
 
 // call(1,2,3) ; 
 
+// let temp = { 
+//     namee : "radhe" , 
+//     age : 12 
+
+// }
+
+
+// let temp1 = {
+//     namee : "krishn" , 
+//     age : 12 
+// }
+
+// function print(home, state) {
+//     console.log(this.namee + " " + this.age + " " + home + " " + state )  
+// }
+
+// print.call(temp , 'vrindavan' , 'up') ; 
+// print.call(temp1 , 'barsana', 'up') ; 
+
+
+// print.apply(temp,[ "vrindavan" , 'up'] ) 
+
+
+// let printName = print.bind( temp1 ,  'vrindavan' , 'up' ) ; 
+
+// printName('down')
+
+
+// let obj = { 
+//     id : 1 ,
+//     course : 'js' , 
+//     venue : 't3' 
+// }
 
 
 
+// let { id ,  course :crs , venue } = obj ; 
+// console.log(id , crs , venue ) ;
+// console.log(id , course , venue ) ;
 
+
+// let { id , course , venue } = obj ; 
+// console.log(id , course , venue ) ;
+
+// let arr = [ 1,2,3,4,5,6,7 ] ;
+
+// let  [ a,b,c , , d ] = arr ; 
+// let  [ a,b,c , ] = arr ; 
+// console.log(a,b,c ) ; 
+// let  [ a,b,c , , d ] = arr ; 
+// console.log(a,b,c ,d ) ; 
+
+
+function print( ...arr  ) {
+
+    console.log(arr) ; 
+}
+// function print( ...rest ) {
+
+//     console.log(...rest) ; 
+// }
+
+let arr =   [1,2,3,4,5,6] ;
+print(...arr)
+
+print( "hello" , "world" , "new")
+
+
+function print1({ ...rest }) {
+
+    console.log(rest) ; 
+}
+
+let obj = { 
+    id : 1 ,
+    course : 'js' , 
+    venue : 't3' 
+}
+
+print1({ ...obj })

@@ -1,29 +1,39 @@
-  function Person(name, age) {
-  this.name = name;
-  this.age = age;
+const person = {
+    fname: "Ayush",
+    lname: "Gaur",
+    contact: "9336394123",
+
+    getPersonInfo: function (){
+        console.log(`Name is ${this.fname + this.lname} and contact number is ${this.contact}`)
+    }
 }
 
-Person.prototype.introduce = function () {
-  console.log(`Hi, I am ${this.name}, age ${this.age}`);
-};
+person.getPersonInfo();
 
- function Employee(name, age, empId, salary) {
-  Person.call(this, name, age);  
-    this.empId = empId;
-  this.salary = salary;
+const emp = Object.create(person);
+
+emp.empId = 1234,
+emp.company= "TTN",
+
+emp.getEmpInfo = function (){
+        console.log(`${this.empId}: ${this.fname + " " + this.lname} and company: ${this.company}`)
+
+    }
+
+
+
+emp.getEmpInfo()
+
+
+const dev = Object.create(emp)
+
+dev.comp = "JS"
+dev.exp = 5
+
+dev.getDevInfo = function() {
+    console.log(`Name: ${this.fname + this.lname} with EMP ID: ${this.empId} is in ${this.comp} comp and ${this.exp} year of experience`)
 }
 
-Employee.prototype = Object.create(Person.prototype);
-Employee.prototype.constructor = Employee;
+// console.log(dev)
 
- function Developer(name, age, empId, salary, tech) {
-  Employee.call(this, name, age, empId, salary);
-  this.tech = tech;
-}
-
-Developer.prototype = Object.create(Employee.prototype);
-Developer.prototype.constructor = Developer;
-
- const dev1 = new Developer("Ayush", 23, 101, 50000, "JavaScript");
-dev1.introduce();
-console.log(dev1.tech);
+dev.getDevInfo()
