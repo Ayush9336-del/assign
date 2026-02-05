@@ -67,7 +67,7 @@ console.log(_name);
 // console.log({a:1} === {a:1});
 
 //  both will give false because in js the objects are compared on the basis of their references , since their references are different so it will give false value
-
+//                ques-5 
 let person = { name: 'Lydia' };
 const members = [person];
 person = null;
