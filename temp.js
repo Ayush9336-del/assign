@@ -270,30 +270,83 @@
 // console.log(a,b,c ,d ) ; 
 
 
-function print( ...arr  ) {
+// function print( ...arr  ) {
 
-    console.log(arr) ; 
-}
+//     console.log(arr) ; 
+// }
 // function print( ...rest ) {
 
 //     console.log(...rest) ; 
 // }
 
-let arr =   [1,2,3,4,5,6] ;
-print(...arr)
+// let arr =   [1,2,3,4,5,6] ;
+// print(...arr)
 
-print( "hello" , "world" , "new")
+// print( "hello" , "world" , "new")
 
 
-function print1({ ...rest }) {
+// function print1({ ...rest }) {
 
-    console.log(rest) ; 
+//     console.log(rest) ; 
+// }
+
+// let obj = { 
+//     id : 1 ,
+//     course : 'js' , 
+//     venue : 't3' 
+// }
+
+// print1({ ...obj })
+
+
+// function demo(a,b) {
+//     console.log(arguments[0]) ; 
+//     console.log(arguments[1]) ; 
+//     console.log(arguments[2]) ; 
+//     console.log(arguments[3]) ; 
+// }
+
+
+// demo(1,2,3,4)
+
+
+// console.log(this)
+
+//  const obj = { 
+//     i : 1 , 
+//     func : function () { 
+//         console.log(this.i ) ; 
+//         console.log( "inside the func " , this)
+//     } , 
+
+//      func2 : function() { 
+//         console.log( "inside the func2" ,  this)
+//         this.func() ; 
+//      }
+// }
+
+// // obj.func()
+// obj.func2()
+
+// console.log(this)
+
+
+let arr  = [ 3421,2,3 , [1,2,3 , [4,5,]] , [ 4,5]] ; 
+
+// let str = JSON.stringify(arr) ; 
+// let ans = str.split('[' ).join('').split(']').join ('').split(',').join(' ').split(' '); 
+// console.log( ans)
+
+
+let ans = [] 
+
+for ( let i = 0 ; i < arr.length ; i++ ){
+    if (typeof  arr[i] == 'object' ){
+        ans = [...ans , ...arr[i]] ; 
+    }
+    else
+        ans.push(arr[i]) ; 
 }
 
-let obj = { 
-    id : 1 ,
-    course : 'js' , 
-    venue : 't3' 
-}
+console.log(ans)
 
-print1({ ...obj })
