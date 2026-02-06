@@ -331,22 +331,137 @@
 // console.log(this)
 
 
-let arr  = [ 3421,2,3 , [1,2,3 , [4,5,]] , [ 4,5]] ; 
+// let arr  = [ 3421,2,3 , [1,2,3 , [4,5,]] , [ 4,5]] ; 
 
 // let str = JSON.stringify(arr) ; 
 // let ans = str.split('[' ).join('').split(']').join ('').split(',').join(' ').split(' '); 
 // console.log( ans)
 
 
-let ans = [] 
+// let ans = [] 
 
-for ( let i = 0 ; i < arr.length ; i++ ){
-    if (typeof  arr[i] == 'object' ){
-        ans = [...ans , ...arr[i]] ; 
-    }
-    else
-        ans.push(arr[i]) ; 
+// for ( let i = 0 ; i < arr.length ; i++ ){
+//     if (typeof  arr[i] == 'object' ){
+//         ans = [...ans , ...arr[i]] ; 
+//     }
+//     else
+//         ans.push(arr[i]) ; 
+// }
+
+// console.log(ans)
+
+// const obj = { 
+//     i : 1 ,
+//     get : ()=>{
+//         console.log(this.i)
+//     }
+// }
+
+// obj.get()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+// var obj = { a: 1 } 
+// Object.seal(obj) ; 
+// delete obj.a ; 
+// console.log(obj.a)
+
+// to /sk ------------------------------------------
+// const a = [ { x : 1 }] 
+
+// const b = [...a] 
+
+// b[0].x = 2 ; 
+
+// console.log(a[0].x) // 2 
+
+// const arr = [ 12,3,[4,5,6,7],5 ] 
+// const brr = arr  
+// const brr = [ ...arr ] 
+// arr[2][0] = 3923 
+
+// console.log(brr) //) [12, 3, 4, 5]
+// console.log(arr)//[12, 3, 3923, 5]
+
+
+// let obj = {
+//     id : 1 , 
+//     course :'js'
+// } 
+// let obj1 = { ...obj } 
+
+// obj1['id'] = 2 
+
+// console.log(obj)  // {id: 1, course: 'js'}
+// console.log(obj1)  // {id: 2, course: 'js'}
+
+
+// function A() {} 
+// function B() {} 
+// B.prototype = new A() ; 
+// var b = new B() ;
+ 
+// console.log(b)
+// console.log( b  instanceof A)
+
+
+// let arr = [ 1,2,3,4,5]
+// let fl = arr.filter((e) =>{
+//     return e %2 ; 
+// }) ; 
+
+
+// Object.create(__proto__)
+// Object.assign 
+// new Object ('name')
+
+
+// const obje = {
+//     a : 10 , 
+// }
+
+// console.log(obje.__proto__)
+
+
+
+// var a = 10 ; //global
+// {
+
+
+//     console.log(b) ; 
+//     let b = 20;  //script 
+// }
+
+// {
+//     let b ;
+//     console.log(b)
+//     b = 20 
+// }
+ 
+// inheritance with function example 
+
+function Animal (id){
+     this.id = id ; 
+}
+function Human(val) {
+    this.val = val ; 
 }
 
-console.log(ans)
+Human.prototype = new Animal(12) ; 
 
+let a = new Human("Thor") ; 
+
+console.log(a)
